@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('detailModal');
-    const pdfModal = document.getElementById('pdfModal');
     const modalContent = document.getElementById('modalContent');
     const viewButtons = document.querySelectorAll('.view-btn');
     const closeButtons = document.querySelectorAll('.close-modal');
@@ -19,9 +18,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
+            
+            .embedded-pdf {
+                width: 100%;
+                height: 700px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+            
+            .download-btn {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                transition: background-color 0.3s;
+            }
+            
+            .download-btn:hover {
+                background-color: #45a049;
+            }
+            
+            .video-container {
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .video-container iframe {
+                width: 100%;
+                height: 315px;
+                border: none;
+                border-radius: 8px;
+            }
         </style>
     `;
     document.head.insertAdjacentHTML('beforeend', modalImageStyle);
+    
     const contentData = [
         {
             title: "Sustentabilidad",
@@ -37,13 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         satisfacer sus propias necesidades.
                 </p>
                 
-            <h3>Tipos de sustentabilidad:</h3>
-            <ul>
-                <li><strong>Sustentabilidad fuerte:</strong> Satisfacer las necesidades de la actual generación pero sin que se vean sacrificadas las capacidades futuras.</li>
-                <li><strong>Sustentabilidad débil:</strong> Aborda el tema desde la perspectiva monetaria de la economía estándar.</li>
-                <li><strong>Sustentabilidad global:</strong> Lo ve desde la perspectiva material de la ecología y las ciencias de la naturaleza.</li>
-                <li><strong>Sostenibilidad local:</strong> Es cuando se busca que procesos o sistemas pequeños (en un lugar o aspecto específico) sean sostenibles, pero no todo el sistema completo. Por ejemplo, cuidar solo el agua o la energía en una zona.</li>
-            </ul>
+                <h3>Tipos de sustentabilidad:</h3>
+                <ul>
+                    <li><strong>Sustentabilidad fuerte:</strong> Satisfacer las necesidades de la actual generación pero sin que se vean sacrificadas las capacidades futuras.</li>
+                    <li><strong>Sustentabilidad débil:</strong> Aborda el tema desde la perspectiva monetaria de la economía estándar.</li>
+                    <li><strong>Sustentabilidad global:</strong> Lo ve desde la perspectiva material de la ecología y las ciencias de la naturaleza.</li>
+                    <li><strong>Sostenibilidad local:</strong> Es cuando se busca que procesos o sistemas pequeños (en un lugar o aspecto específico) sean sostenibles, pero no todo el sistema completo. Por ejemplo, cuidar solo el agua o la energía en una zona.</li>
+                </ul>
             `
         },
         {
@@ -52,12 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
             content: `
                 <h2>Investigar que es economía, sociedad y naturaleza</h2>
                 <img src="/ds/slider-main/image/extra1.jpg" alt="Tarea numero 1" class="modal-image">
-            <h3>Conceptos</h3>
-            <ul>
-                <li><strong>Economia:</strong> Sistema de producción, distribución, intercambio y consumo de bienes y servicios que satisface las necesidades humanas.</li>
-                <li><strong>Sociedad:</strong> Conjunto de invididuos que conviven en un espacio determinado compartiendo una cultura, normas y valores.</li>
-                <li><strong>Naturaleza:</strong> Conjunto de ecosistemas, recursos naturales y procesos biologicos que sostiene la vida en la tierra.</li>
-            </ul>
+                <h3>Conceptos</h3>
+                <ul>
+                    <li><strong>Economia:</strong> Sistema de producción, distribución, intercambio y consumo de bienes y servicios que satisface las necesidades humanas.</li>
+                    <li><strong>Sociedad:</strong> Conjunto de invididuos que conviven en un espacio determinado compartiendo una cultura, normas y valores.</li>
+                    <li><strong>Naturaleza:</strong> Conjunto de ecosistemas, recursos naturales y procesos biologicos que sostiene la vida en la tierra.</li>
+                </ul>
             `
         },
         {
@@ -76,14 +116,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     medio ambiente en esos escenarios y dentro de su comunidad.</li>
                 </ul>
                 
-                <div class="pdf-buttons">
-                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/investigacion_de_campo.pdf">
-                        <i class="fas fa-download"></i> Descargar PDF
-                    </button>
-                    <button class="view-online-btn" data-pdf="/ds/slider-main/pdf/investigacion_de_campo.pdf">
-                        <i class="fas fa-eye"></i> Visualizar PDF
-                    </button>
-                </div>
+                <iframe src="/ds/slider-main/pdf/investigacion_de_campo.pdf" class="embedded-pdf"></iframe>
+                
+                <button class="download-btn" data-pdf="/ds/slider-main/pdf/investigacion_de_campo.pdf">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </button>
             `
         },
         {
@@ -93,15 +130,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="/ds/slider-main/image/principio-sustentabilidad.jpg" alt="Sustentabilidad Ambiental" class="modal-image">
                 <p>Están inspirados en una diversidad de Propuestas y declaratorias que de una u otra manera
                 sirvieron de marco para la definición de las temáticas que se han abordado desde la conferencia de las naciones unidas sobre el medio ambiente.</p>
-                <p>El principio más básico es la capacidad de carga se refiere a la “carga máxima” un área en particular de la tierra puede sostener sin afectar negativamente a otros organismos en ese entorno.</p>   
-            <h3>Tipos de sustentabilidad:</h3>
-            <ul>
-                <li><strong>De precaución:</strong> El principio de precaución establece que cuando haya peligro de daño irreversible al
-                medio ambiente, deben tomarse medidas para proteger el medio ambiente, incluso si existe incertidumbre científica.</li>
-                <li><strong>Sustentabilidad débil:</strong> Aborda el tema desde la perspectiva monetaria de la economía estándar.</li>
-                <li><strong>Sustentabilidad global:</strong> Lo ve desde la perspectiva material de la ecología y las ciencias de la naturaleza.</li>
-                <li><strong>Sostenibilidad local:</strong> Es cuando se busca que procesos o sistemas pequeños (en un lugar o aspecto específico) sean sostenibles, pero no todo el sistema completo. Por ejemplo, cuidar solo el agua o la energía en una zona.</li>
-            </ul>
+                <p>El principio más básico es la capacidad de carga se refiere a la "carga máxima" un área en particular de la tierra puede sostener sin afectar negativamente a otros organismos en ese entorno.</p>   
+                
+                <h3>Tipos de sustentabilidad:</h3>
+                <ul>
+                    <li><strong>De precaución:</strong> El principio de precaución establece que cuando haya peligro de daño irreversible al
+                    medio ambiente, deben tomarse medidas para proteger el medio ambiente, incluso si existe incertidumbre científica.</li>
+                    <li><strong>Sustentabilidad débil:</strong> Aborda el tema desde la perspectiva monetaria de la economía estándar.</li>
+                    <li><strong>Sustentabilidad global:</strong> Lo ve desde la perspectiva material de la ecología y las ciencias de la naturaleza.</li>
+                    <li><strong>Sostenibilidad local:</strong> Es cuando se busca que procesos o sistemas pequeños (en un lugar o aspecto específico) sean sostenibles, pero no todo el sistema completo. Por ejemplo, cuidar solo el agua o la energía en una zona.</li>
+                </ul>
             `
         },
         {
@@ -161,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "Escenario Economico",
             content: `
-                <h2>Principios de la Sustentabilidad</h2>
+                <h2>Escenario Económico</h2>
                 <img src="/ds/slider-main/image/escenarios-economicos.avif" alt="Sustentabilidad Ambiental" class="modal-image">
                 <p>La economía falla al valorar la riqueza global de las naciones, sus recursos naturales y especialmente los precios de las materias primas. De allí la importancia de valorizar los
                 recursos al menos por su costo de reposición y construir con ellos.</p>
@@ -191,7 +229,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Dilemas éticos:</strong> ¿Quién debe controlar sistemas que afectan a todo el planeta?</li>
                     <li><strong>Cooperación internacional:</strong> Necesidad de colaboración global para enfrentar problemas ambientales.</li>
                 </ul>
-                </div>            `
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/zEtUt-14wpQ" title="Trailer de Geotormenta" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <iframe src="/ds/slider-main/pdf/geotormenta.pdf" class="embedded-pdf"></iframe>
+                
+                <button class="download-btn" data-pdf="/ds/slider-main/pdf/geotormenta.pdf">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </button>
+            `
         }
     ];
 
@@ -202,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Asignar data-filter a los botones de filtro
-    // Todos, Conceptos, Actividades, Materiales, Documentos
     filterButtons[0].setAttribute('data-filter', 'todos');
     filterButtons[1].setAttribute('data-filter', 'conceptos');
     filterButtons[2].setAttribute('data-filter', 'actividades');
@@ -225,14 +272,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 };
             });
-            // Asignar event listeners a los botones de PDF dentro del modal
+            
+            // Asignar event listeners a los botones de PDF
             setupPDFButtons();
         });
     });
+    
     closeButtons.forEach(button => {
         button.addEventListener('click', function() {
             modal.style.display = 'none';
-            pdfModal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Restaurar scroll
         });
     });
@@ -242,18 +290,15 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-        if (event.target == pdfModal) {
-            pdfModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
     });
 
-    // Filtrado de galería (corregido)
+    // Filtrado de galería
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             const filterValue = this.getAttribute('data-filter');
+            
             // Filtrar los elementos de la galería
             galleryItems.forEach(item => {
                 if (filterValue === 'todos') {
@@ -266,6 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    
     // Al cargar la página, activar el botón "Todos" por defecto
     filterButtons[0].click();
 
@@ -278,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100 * index);
         });
     }
+    
     // Llamar a la animación cuando la página esté cargada
     animateItems();
     
@@ -321,19 +368,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function setupPDFButtons() {
         const downloadButtons = document.querySelectorAll('.download-btn');
-        const viewButtons = document.querySelectorAll('.view-online-btn');
         
         downloadButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const pdfUrl = this.getAttribute('data-pdf');
                 downloadPDF(pdfUrl);
-            });
-        });
-        
-        viewButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const pdfUrl = this.getAttribute('data-pdf');
-                viewPDFOnline(pdfUrl);
             });
         });
     }
@@ -360,19 +399,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error("Error al descargar PDF:", error);
             alert("No se pudo descargar el PDF. Por favor intente nuevamente.");
-        }
-    }
-    
-    // Función para ver PDF en línea
-    function viewPDFOnline(pdfUrl) {
-        console.log("Intentando visualizar:", pdfUrl);
-        
-        try {
-            // Abrir PDF en nueva ventana/pestaña
-            window.open(pdfUrl, '_blank');
-        } catch (error) {
-            console.error("Error al visualizar PDF:", error);
-            alert("No se pudo abrir el PDF para visualización. Por favor intente nuevamente.");
         }
     }
 });
