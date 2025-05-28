@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const contentData = [
         {
-            title: "ODS Numero 6 - Agua limpia y saneamiento",
+            title: "Contenido de la unidad 5 - PDF",
             category: "documentos",
             content: 
             `
-                <h2>ODS Numero 6 - Agua limpia y saneamiento</h2>
-                <iframe src="/ds/slider-main/pdf/ODS666.pdf" class="embedded-pdf"></iframe>
+                <h2>Contenido de la unidad 5 - PDF</h2>
+                <iframe src="/ds/slider-main/pdf/unidad5.pdf" class="embedded-pdf"></iframe>
                 <div class="pdf-buttons">
-                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/ODS666.pdf">
+                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/unidad5.pdf">
                         <i class="fas fa-download"></i> Descargar PDF
                     </button>
                 </div>
