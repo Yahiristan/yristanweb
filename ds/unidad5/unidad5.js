@@ -78,29 +78,42 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         {
-            title: "Tarea 2 - LGEEPA", 
+            title: "HuellaEcologica", 
             category: "documentos",
             content: 
             `
-                <h2>LGEEPA</h2>
-                <img src="/ds/slider-main/image/LGEEPA.png" alt="Imagen tarea numero 2" class="modal-image">
-                <iframe src="/ds/slider-main/pdf/lgeepa.pdf" class="embedded-pdf"></iframe>
+                <h2>Tarea - Huella Ecologica</h2>
+                <iframe src="/ds/slider-main/pdf/Huellaecologica.pdf" class="embedded-pdf"></iframe>
                 <div class="pdf-buttons">
-                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/lgeepa.pdf">
+                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/Huellaecologica.pdf">
                         <i class="fas fa-download"></i> Descargar PDF
                     </button>
                 </div>
             `
         },
         {
-            title: "Tarea 3 - Reporte video", 
+            title: "Contaminacion", 
             category: "documentos",
             content: 
             `
-                <h2>Reporte del video tecnologico</h2>
-                <iframe src="/ds/slider-main/pdf/reporte_tecnologico.pdf" class="embedded-pdf"></iframe>
+                <h2>Tarea - Contaminación Ambiental</h2>
+                <iframe src="/ds/slider-main/pdf/ContaminacionAmbiental.pdf" class="embedded-pdf"></iframe>
                 <div class="pdf-buttons">
-                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/reporte_tecnologico.pdf">
+                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/ContaminacionAmbiental.pdf">
+                        <i class="fas fa-download"></i> Descargar PDF
+                    </button>
+                </div>
+            `
+        },
+        {
+            title: "Siembra", 
+            category: "documentos",
+            content: 
+            `
+                <h2>Reporte de Siembra</h2>
+                <iframe src="/ds/slider-main/pdf/Reporte_siembra.pdf" class="embedded-pdf"></iframe>
+                <div class="pdf-buttons">
+                    <button class="download-btn" data-pdf="/ds/slider-main/pdf/Reporte_siembra.pdf">
                         <i class="fas fa-download"></i> Descargar PDF
                     </button>
                 </div>
