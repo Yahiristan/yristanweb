@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 4: Escenario Economico</title>
+    <link rel="stylesheet" href="unidad4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Yristan</div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Yristan Web</a></li>
+        </ul>
+        <div class="back-button">
+            <a href="index.html" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="hero">
+            <h1>Unidad 4: Escenario Economico</h1>
+            <p>Portafolio - Edgar Yahir Santillán Solano</p>
+        </div>
+
+        <div class="gallery-controls">
+            <div class="gallery-filters">
+                <button class="active" data-filter="todos">Todos</button>
+                <button data-filter="conceptos">Conceptos</button>
+                <button data-filter="actividades">Actividades</button>
+                <button data-filter="materiales">Materiales</button>
+                <button data-filter="documentos">Documentos</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="img4.jpg" alt="ODS6">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Contenido Unidad 4</h3>
+                            <p>Documento PDF proporcionado por la maestra.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 2 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="extra1.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea - PIB</h3>
+                            <p>Que es PIB y como se distribuye</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="img3.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea - Conceptos</h3>
+                            <p>Internalización y Externalización de costos</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="escenarios-economicos.avif" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea - Servicios Ambientales</h3>
+                            <p>Identificar servicios ambientales en la región.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="extra2.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Video - Historias de las cosas</h3>
+                            <p>Acerca del desarollo sustentable.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Modal para ver detalles -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para ver PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content pdf-modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="pdfViewer">
+                    <!-- El contenido del PDF se cargará aquí -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Yristan - Desarrollo Sustentable</p>
+        </div>
+    </footer>
+
+    <script src="unidad4.js"></script>
+</body>
+</html>
