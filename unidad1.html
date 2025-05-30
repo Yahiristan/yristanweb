@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 1 - Introducción al desarrollo sustentable</title>
+    <link rel="stylesheet" href="unidad1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Yristan</div>
+        <ul class="menu">
+            <li><a href="/ds/slider-main/index.html">Inicio</a></li>
+            <li><a href="/index.html">Yristan Web</a></li>
+        </ul>
+        <div class="back-button">
+            <a href="index.html" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="hero">
+            <h1>Unidad 1: Introducción al desarrollo sustentable</h1>
+            <p>Portafolio - Edgar Yahir Santillán Solano</p>
+        </div>
+
+        <div class="gallery-controls">
+            <div class="gallery-filters">
+                <button class="active" data-filter="todos">Todos</button>
+                <button data-filter="conceptos">Conceptos</button>
+                <button data-filter="actividades">Actividades</button>
+                <button data-filter="materiales">Materiales</button>
+                <button data-filter="documentos">Documentos</button>
+            </div>
+        </div>
+
+        <!-- Galería de imágenes - UN SOLO CONTENEDOR -->
+        <div class="gallery">
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/img1.jpg" alt="U1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Contenido Unidad 1</h3>
+                            <p>Contenido proporcionado por la maestra.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 1 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/sustentabilidad.jpg" alt="Concepto de sustentabilidad">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Sustentabilidad</h3>
+                            <p>Que es, para que es, tipos de sustentabilidad.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 2 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/extra1.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea numero 1</h3>
+                            <p>Concepto de economia, sociedad y la naturaleza</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 3 -->
+            <div class="gallery-item documentos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/extra2.jpg" alt="Tarea numero 2">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea numero 1 - PDF</h3>
+                            <p>Estudio de campo</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/principio-sustentabilidad.jpg" alt="principio-sustentabilidad">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Principios de la Sustentabilidad</h3>
+                            <p>Se aborda todos los tipos.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/dimensiones-sustentabilidad.jpg" alt="Economía sustentable">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Dimensiones de la sustentabilidad</h3>
+                            <p>Son 4 dimensiones.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 6 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/escenarios-economicos.avif" alt="Economía sustentable">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Escenario Economico</h3>
+                            <p>Valoren los recursos naturales.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/socio-cultural.jpg" alt="Economía sustentable">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Escenario Socio-Cultural</h3>
+                            <p>Promueve el uso de los recursos naturales de manera prudente y inteligente.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Modal para ver detalles -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para ver PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content pdf-modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="pdfViewer">
+                    <!-- El contenido del PDF se cargará aquí -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Yristan - Desarrollo Sustentable</p>
+        </div>
+    </footer>
+
+    <script src="unidad1.js"></script>
+</body>
+</html>

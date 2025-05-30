@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 5: Escenario Modificado</title>
+    <link rel="stylesheet" href="unidad5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Yristan</div>
+        <ul class="menu">
+            <li><a href="/ds/slider-main/index.html">Inicio</a></li>
+            <li><a href="/index.html">Yristan Web</a></li>
+        </ul>
+        <div class="back-button">
+            <a href="index.html" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="hero">
+            <h1>Unidad 5: Escenario Modificado</h1>
+            <p>Portafolio - Edgar Yahir Santillán Solano</p>
+        </div>
+
+        <div class="gallery-controls">
+            <div class="gallery-filters">
+                <button class="active" data-filter="todos">Todos</button>
+                <button data-filter="conceptos">Conceptos</button>
+                <button data-filter="actividades">Actividades</button>
+                <button data-filter="materiales">Materiales</button>
+                <button data-filter="documentos">Documentos</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/img5.jpg" alt="ODS6">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Contenido Unidad 5</h3>
+                            <p>Documento PDF proporcionado por la maestra.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 2 -->
+            <div class="gallery-item conceptos">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/extra1.jpg" alt="ODS6">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea - Huella Ecologica</h3>
+                            <p>Resumen de este tema, para comprender mejor la situacion del pais.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento 3 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/ecosistema.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Tarea - Contaminación Ambiental</h3>
+                            <p>Realizado en equipos de 4, para detallar la situación ambiental en tierra, aire y mar</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/img2.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Reporte de siembra</h3>
+                            <p>Este es el ultimo reporte de siembra de nuestro mamón.</p>
+                            <button class="view-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Elemento 4 -->
+            <div class="gallery-item actividades">
+                <div class="image-container">
+                    <img src="/ds/slider-main/image/img5.jpg" alt="Tarea numero 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Fin</h3>
+                            <p>Hasta aqui se separan nuestros caminos, fue un honor estar con ustedes hasta el final..</p>
+                            <button class="view-btn">¡Hasta la proxima!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal para ver detalles -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para ver PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content pdf-modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="pdfViewer">
+                    <!-- El contenido del PDF se cargará aquí -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Yristan - Desarrollo Sustentable</p>
+        </div>
+    </footer>
+
+    <script src="unidad5.js"></script>
+</body>
+</html>
